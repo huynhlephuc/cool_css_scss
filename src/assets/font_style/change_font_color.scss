@@ -1,0 +1,41 @@
+.effect, .text {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    // padding-top: 10px; 
+}
+
+.effect {
+    width: 35px;
+    height: 35px;
+    background-color: #000;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: ef 3s ease-in-out infinite alternate;
+}
+
+.content {
+    color: #fff;
+    position: absolute;
+    left: 0;
+    width: max-content;
+    animation: ct 3s ease-in-out infinite alternate;
+}
+
+@keyframes ef {
+    from {
+        transform: translate(-20px, 0);
+    }
+    to {
+        transform: translate(110px, 0);
+    }
+}
+
+@keyframes ct {
+    from {
+        transform: translate(20px, 0);
+    }
+    to {
+        transform: translate(-110px, 0);
+    }
+}
