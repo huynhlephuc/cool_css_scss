@@ -1,0 +1,54 @@
+.text {
+  position: relative;
+  color: black;
+  font-size: 130px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  animation: eff 525ms infinite;
+}
+
+.text::after, .text::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "attr"(data-text);
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+.text::before {
+    animation: eff 675ms infinite;
+    transform: translate(-3px, -3px);
+    clip-path: polygon(0 0 , 100% 0, 100% 45%, 0 45%);
+}
+
+.text::after {
+    animation: eff 333ms infinite;
+    transform: translate(3px, 3px);
+    clip-path: polygon(0 60% , 100% 60%, 100% 100%, 0 100%);
+
+}
+
+@keyframes eff {
+  0% {
+    text-shadow: 6px 0px 0px #ff0000, -6px -4px 0 #00ff00, 4px 6px 0px #0000ff;
+  }
+  14% {
+    text-shadow: 6px 0 0 #ff0000, -6px -4px 0 #00ff00, 4px 6px 0 #0000ff;
+  }
+  15% {
+    text-shadow: -6px -4px 0 #ff0000, 4px 4px 0 #00ff00, -6px -6px 0 #0000ff;
+  }
+  49% {
+    text-shadow: -6px -4px 0 #ff0000, 4px 4px 0 #00ff00, -6px -6px 0 #0000ff;
+  }
+  50% {
+    text-shadow: 4px 6px 0 #ff0000, 4px 4px 0 #00ff00, 0 -0px 0 #0000ff;
+  }
+  99% {
+    text-shadow: 4px 6px 0 #ff0000, -4px -4px 0 #00ff00, 0 -6px 0 #0000ff;
+  }
+  100% {
+    text-shadow: -4px 0 0 #ff0000, -4px -4px 0 #00ff00, 0 -6px 0 #0000ff;
+  }
+}
