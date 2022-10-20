@@ -1,80 +1,147 @@
 body {
-    overflow: hidden;
-    background-color: #477879;
+  overflow: hidden;
+  background-color: #477879;
 }
 .box {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
 }
 
-.box::before{
-    position: absolute;
-    background-color: #e69c9f;
-    width: 100px;
-    height: 100px;
-    content: "";
-    bottom: 0;
-    left: 0;
-    clip-path: polygon(0 40%, 50% 0, 100% 40%, 100% 100%, 0% 100%);
+.box::before {
+  position: absolute;
+  background-color: #e69c9f;
+  width: 100px;
+  height: 100px;
+  content: "";
+  bottom: 0;
+  left: 0;
+  clip-path: polygon(0 40%, 50% 0, 100% 40%, 100% 100%, 0% 100%);
 }
 
-.box::after{
-    position: absolute;
-    width: 100px;
-    background-color: #000000;
-    content: '';
-    height: 10px;
-    bottom: -30px;
-    opacity: 0.4;
-    filter: blur(10px)
+.box::after {
+  position: absolute;
+  width: 100px;
+  background-color: #000000;
+  content: "";
+  height: 10px;
+  bottom: -30px;
+  opacity: 0.4;
+  filter: blur(10px);
 }
 
 .content {
-    position: absolute;
-    background-color: #f2EEE4;
-    width: 80%;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%, -10px);
-    height: 80px;
-    transition: 0.5s;
-
+  position: absolute;
+  background-color: #f2eee4;
+  width: 80%;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -10px);
+  height: 80px;
+  transition: 0.5s;
 }
 
 .designBox {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #d26f72;
-    display: block;
-    clip-path: polygon(0% 0%, 50% 35%, 100% 0%, 100% 100% , 0% 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #d26f72;
+  display: block;
+  clip-path: polygon(0% 0%, 50% 35%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .designBox::after {
-    position: absolute;
-    bottom: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 65%;
+  background-color: #bd5559;
+  content: "";
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+}
+
+.box:hover .content {
+  transform: translate(-50%, -30px);
+}
+
+input:checked ~ .content {
+  bottom: 150px;
+  width: 250px;
+  height: 400px;
+  margin: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: x-large;
+  display: none;
+}
+
+img {
+  width: 100%;
+//   display: none;
+}
+
+.des {
+  padding: 10px 20px;
+  display: none;
+}
+
+.content {
+  label {
     width: 100%;
-    left: 0;
-    height: 65%;
-    background-color: #bd5559;
-    content: "";
-    clip-path: polygon(0% 100%, 50% 0%, 100% 100%)
+    text-align: center;
+    display: block;
+    display: none;
+    cursor: pointer;
+  }
 }
 
-.box:hover .content{
-    transform: translate(-50%, -30px)
+input:checked ~ .content {
+//   img {
+//     display: block;
+//     opacity: 0;
+//     animation: showcontent 1s ease-in-out 0.5s 1 forwards;
+//   }
+
+  .title {
+    display: block;
+    opacity: 0;
+
+    animation: showcontent 1s ease-in-out 0.5s 1 forwards;
+  }
+
+  .des {
+    display: block;
+    opacity: 0;
+
+    animation: showcontent 1s ease-in-out 0.5s 1 forwards;
+  }
+
+  label {
+    display: block;
+    opacity: 0;
+
+    animation: showcontent 1s ease-in-out 0.5s 1 forwards;
+  }
 }
 
-input:checked ~ .content{
-     bottom: 150px;
-     width: 250px;
-     height: 400px;
-     margin: 0;
-     left: 50%;
-     transform: translate(-50%)
+@keyframes showcontent {
+  form {
+    opacity: 0;
+    transform: translate(0, 50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
 }
