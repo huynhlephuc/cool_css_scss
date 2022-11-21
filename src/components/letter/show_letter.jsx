@@ -7,13 +7,13 @@ const ShowLetter = () => {
             <input type="checkbox" id="message"></input>
             <div className="content">
                 <img alt="" src="https://anhdephd.vn/wp-content/uploads/2022/06/anh-cho-cute-anh-cho-chibi-3.jpg" />
-                <div className="title">My lovely Cúc</div>
+                <div className="title">Cúc yêu dấu</div>
                 <div className="des">
-                  Cúc dễ thương lắm đó Cúc có biết không nè, nên là Cúc phải cười nhiều vô, không thôi là xấu á. Hôm nào Cúc muốn thì tui qua chở Cúc đi ăn nha. Cúc muốn đi đâu cũng được. 
-                  <p>Iu Cúc nhất luôn </p>
-                  <p>Kí tên: Phúc nè :3</p>
+                Anh yêu em nhiều lắm á
+                </div><div className="des">
+                  Nên là đừng buồn nữa nhé
                 </div>
-                <label className="" htmlFor="message">Close</label>
+                <label className="" htmlFor="message">Love you!!</label>
             </div>
             <label htmlFor="message" className="designBox"></label>
         </div>

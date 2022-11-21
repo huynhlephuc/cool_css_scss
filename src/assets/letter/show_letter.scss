@@ -38,7 +38,7 @@ body {
   width: 80%;
   left: 50%;
   bottom: 0;
-  transform: translate(-50%, -500px);
+  transform: translate(-50%, -10px);
   height: 80px;
   transition: 0.5s;
 }
@@ -72,7 +72,7 @@ body {
 input:checked ~ .content {
   bottom: 150px;
   width: 250px;
-  height: 600px;
+  height: 400px;
   margin: 0;
   left: 50%;
   transform: translate(-50%);
@@ -94,6 +94,7 @@ img {
 .des {
   padding: 10px 20px;
   display: none;
+  text-align: center;
 }
 
 .content {
