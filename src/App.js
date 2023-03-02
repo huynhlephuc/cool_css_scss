@@ -8,14 +8,16 @@ import './assets/index.scss';
 // import ShowLetter from './components/letter/show_letter';
 // import PageTurning from './components/book/PageTurning';
 // import PageFlipOnClick from './components/book/PageFlipOnClick';
-import BookWebReponsive from './components/template/BookWebReponsive';
+// import BookWebReponsive from './components/template/BookWebReponsive';
+import PingPingLeterGame from './components/games/PingPingLetterGame';
+
  
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <BookWebReponsive />
+        <PingPingLeterGame />
       </header>
     </div>
   );
