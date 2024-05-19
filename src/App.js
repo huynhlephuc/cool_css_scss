@@ -5,15 +5,24 @@ import './assets/index.scss';
 // import { SearchResponsive } from './components/search/search_responsive';
 // import { LagText } from './components/font/lag_text';
 // import FontCut from './components/font/font_cut';
+
 import ShowLetter from './components/letter/show_letter';
+import PingPingLeterGame from './components/games/PingPingLetterGame';
 import Spline from '@splinetool/react-spline';
 
 function App() {
   return (
     <Spline scene="https://prod.spline.design/gz9kiKxKJBvdVKrl/scene.splinecode" />
-  );
-}
+  )
+    
+
+
+
  
+
+
+}
+
 
 // function App() {
 //   return (
