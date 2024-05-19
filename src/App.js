@@ -6,16 +6,23 @@ import './assets/index.scss';
 // import { LagText } from './components/font/lag_text';
 // import FontCut from './components/font/font_cut';
 import ShowLetter from './components/letter/show_letter';
- 
+import Spline from '@splinetool/react-spline';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <ShowLetter />
-      </header>
-    </div>
+    <Spline scene="https://prod.spline.design/gz9kiKxKJBvdVKrl/scene.splinecode" />
   );
 }
+ 
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <ShowLetter />
+//       </header>
+//     </div>
+//   );
+// }
 
 export default App;
